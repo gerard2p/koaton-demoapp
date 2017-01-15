@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        {%block meta%} {% endblock %}
+        <title>{%block title%} default title {% endblock %}</title>
+		{{"admin.css" | bundle | safe}}
+        {%block css%} {% endblock %}
+    </head>
+    <body>
+        {%block body%} {% endblock %}
+		{{"admin.js" | bundle | safe}}
+        {%block js%} {% endblock %}
+        {%if env_dev %}
+            <script src="http://localhost:62627/livereload.js?snipver=1"></script>
+        {% endif %}
+    </body>
+</html>

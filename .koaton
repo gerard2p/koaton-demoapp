@@ -1,0 +1,26 @@
+{
+  "bundles": {
+    "admin.css": [
+      "/css/0admin.css"
+    ],
+    "admin.js": [
+      "/js/admin.js"
+    ]
+  },
+  "database": {
+    "models": {
+      "book": "title:string pages:number",
+      "page": "number:number content:string",
+      "user": "name:string username:string password:password lastname:string age:number email:email"
+    },
+    "relations": {
+      "pages": "hasMany page pageId"
+    }
+  },
+  "commands": [
+    "koaton model user name lastname age:number email:email",
+    "koaton model book title pages:number",
+    "koaton model page number:number content",
+    "koaton model book hasmany page as pages"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "testingapp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "keywords": [
+    "Koaton",
+    "Koa",
+    "MVC",
+    "Websockets",
+    "Server",
+    "Demo"
+  ],
+  "scripts": {
+    "prestart": "node ./node_modules/koaton/scripts/build.js",
+    "start": "node app.js"
+  },
+  "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "handlebars": "^4.0.6",
+    "handlebars-layouts": "^3.1.4",
+    "koa": "1.x.x",
+    "koaton": "*",
+    "mongoose": "^4.7.1",
+    "nunjucks": "^3.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.12.2",
+    "eslint-config-happiness": "^5.3.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "koaton-exporter": "^1.0.2",
+    "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
