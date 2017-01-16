@@ -12,8 +12,11 @@
     "Demo"
   ],
   "scripts": {
-    "prestart": "node ./node_modules/koaton/scripts/build.js",
-    "start": "node app.js"
+    "convert": "koaton-exporter **/*.es6 __exported -e es6.js -r __exported",
+    "assets":"node ./node_modules/koaton/scripts/build.js",
+    "link":"node ./node_modules/koaton/scripts/makelinks.js",
+    "prestart": "npm run convert && npm run assets && npm run link",
+    "start": "node exported/app.js"
   },
   "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
   "license": "MIT",
@@ -34,7 +37,7 @@
     "eslint-config-happiness": "^5.3.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "koaton-exporter": "^1.0.2",
+    "koaton-exporter": "^1.2.0",
     "semantic-release": "^6.3.2"
   },
   "config": {
