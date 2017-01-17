@@ -12,11 +12,10 @@
     "Demo"
   ],
   "scripts": {
-    "convert": "koaton-exporter **/*.es6 __exported -e es6.js -r __exported",
+    "convert": "koaton-exporter **/*.es6 ./ -e js",
     "assets":"node ./node_modules/koaton/scripts/build.js",
-    "link":"node ./node_modules/koaton/scripts/makelinks.js",
-    "prestart": "npm run convert && npm run assets && npm run link",
-    "start": "node exported/app.js"
+    "prestart": "npm run assets",
+    "start": "node app.js"
   },
   "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
   "license": "MIT",

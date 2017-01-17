@@ -1,11 +1,12 @@
 "use strict";
 
-exports.default={
+exports.default = {
   "restapp": {
-    "mount": "/fakepackage",
+    "mount": "/panel",
     "directory": "restapp",
-    "access": "private",
+    "access": "public",
     "adapter": "http://localhost:62650",
+    "subdomain": "www",
     "layout": "main"
   }
 };
