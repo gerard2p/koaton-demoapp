@@ -9,12 +9,17 @@
   },
   "database": {
     "models": {
-      "book": "title:string pages:number",
+      "book": "title:string author:string page_count:number",
+      "distributor": "name:string",
       "page": "number:number content:string",
+      "post": "name:string content:string",
       "user": "name:string username:string password:password lastname:string age:number email:email"
     },
     "relations": {
-      "pages": "hasMany page pageId"
+      "pages": "hasMany page bookId",
+      "distributor": "hasMany distributor distributor_book",
+      "books": "hasMany book distributor_book",
+      "book": "hasMany book bookId"
     }
   },
   "commands": [
