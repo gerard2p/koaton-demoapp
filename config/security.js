@@ -2,7 +2,7 @@
 
 exports.default = {
 	tokenTimeout: {
-		dev: 5,
+		dev: 10,
 		prod: 60 * 5
 	},
 	keys: ['9184f115438655076a7675827bbfa1d98745217f'],
