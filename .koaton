@@ -4,7 +4,10 @@
       "/css/0admin.css"
     ],
     "admin.js": [
-      "/js/admin.js"
+      "/js/admin.min.js"
+    ],
+    "bootstrap.js": [
+      "/js/bootstrap.min.js"
     ]
   },
   "database": {
@@ -13,7 +16,7 @@
       "distributor": "name:string",
       "page": "number:number content:string",
       "post": "name:string content:string",
-      "user": "name:string username:string password:password lastname:string age:number email:email"
+      "user": "name:string username:string password:string lastname:string age:number email:email"
     },
     "relations": {
       "pages": "hasMany page bookId",
@@ -22,10 +25,5 @@
       "book": "hasMany book bookId"
     }
   },
-  "commands": [
-    "koaton model user name lastname age:number email:email",
-    "koaton model book title pages:number",
-    "koaton model page number:number content",
-    "koaton model book hasmany page as pages"
-  ]
+  "commands": []
 }

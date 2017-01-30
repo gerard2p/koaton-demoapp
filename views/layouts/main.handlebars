@@ -4,13 +4,13 @@
         <meta charset="utf-8" />
         {{{block "meta"}}}
         <title>{{block "title"}}</title>
-		{{{bundle "admin.css"}}}
+		      {{{bundle "admin.css"}}}
         {{{block "css"}}}
     </head>
     <body>
         {{{block "body"}}}
-		{{{bundle "admin.js"}}}
         {{{block "js"}}}
+        {{{bundle "bootstrap.js"}}}
         {{#if env_dev}}
             <script src="http://localhost:62627/livereload.js?snipver=1"></script>
         {{/if}}

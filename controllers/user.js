@@ -1,5 +1,4 @@
-"use strict";
-
+'use strict';
 exports.default = {
-	REST: 'public'
+	REST:'public'
 };

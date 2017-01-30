@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
-exports.default = {
+exports.default={
   "restapp": {
     "mount": "/panel",
     "directory": "restapp",
     "access": "public",
-    "adapter": "http://localhost:62650",
+    "adapter": "localhost",
     "subdomain": "www",
     "layout": "main"
   }
