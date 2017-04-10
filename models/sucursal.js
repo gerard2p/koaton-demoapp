@@ -7,7 +7,7 @@ exports.default = function (schema, relation) {
 		},
 		extra: {},
 		relations: {
-			"books": relation.hasMany("book.distributor_book")
+			"books": relation.manyToMany({targetModel: "book"})
 		}
 	};
 };

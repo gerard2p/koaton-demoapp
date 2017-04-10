@@ -14,5 +14,3 @@ exports.default = function (schema, relation) {
 		}
 	};
 };
-
-;

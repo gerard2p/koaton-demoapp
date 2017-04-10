@@ -14,6 +14,7 @@ exports.default = function ( subdomains ) {
 	www.rest('book')
 		.rest('page')
 		.rest('post')
+		.rest('sucursal')
 		.rest('/users', 'user');
 
 	origin.get('/', function* (next) {

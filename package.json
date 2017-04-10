@@ -15,7 +15,8 @@
     "convert": "koaton-exporter **/*.es6 ./ -e js",
     "assets":"node ./node_modules/koaton/scripts/build.js",
     "prestart": "npm run assets",
-    "start": "node app.js"
+    "start": "node app.js",
+    "commit": "git add -A & git-cz"
   },
   "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
   "license": "MIT",
