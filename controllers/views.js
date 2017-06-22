@@ -1,12 +1,12 @@
 'use strict';
 exports.default = {
-	fake: function * () {
-		yield this.render('fake.ejs', { body: 'compiled ejs' });
+	fake: async function (ctx, next) {
+		await ctx.render('fake.ejs', { body: 'compiled ejs' });
 	},
-	noengine: function * () {
-		yield this.render('fake.noengine', { body: 'compiled noengine' });
+	noengine: async function (ctx, next) {
+		await ctx.render('fake.noengine', { body: 'compiled noengine' });
 	},
-	nunjucks: function * () {
-		yield this.render('test.njk');
+	nunjucks: async function (ctx, next) {
+		await ctx.render('test.njk');
 	}
 };

@@ -1,5 +1,5 @@
 "use strict";
 
-exports.default = function* (findcre) {
-	yield findcre({ name: "gerardo", lastname: "perez" });
+exports.default = async function (findcre) {
+	await findcre({ name: "gerardo", lastname: "perez" });
 };

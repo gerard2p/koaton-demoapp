@@ -4,7 +4,6 @@ const fs = require('fs');
 
 exports.default = function ( subdomains ) {
 	let {www , origin} = subdomains;
-
 	www.get('/')
 		.get('/login')
 		.get('/ejs', 'views.fake')
@@ -17,12 +16,11 @@ exports.default = function ( subdomains ) {
 		.rest('sucursal')
 		.rest('/users', 'user');
 
-	origin.get('/', function* (next) {
-		console.log('here');
-		yield next;
-		this.body = fs.createReadStream('public/SampleVideo.mp4');
-	}).post('/',function * (next) {
-    this.statusCode = 100;
+	origin.get('/', async function (ctx, next) {
+		await next();
+		ctx.body = fs.createReadStream('public/SampleVideo.mp4');
+	}).post('/', async function (ctx, next) {
+    ctx.statusCode = 100;
   }, true)
 		.delete('/', true)
 		.put('/', true);
