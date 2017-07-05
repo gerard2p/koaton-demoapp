@@ -34,6 +34,13 @@ exports.default = {
 				'./assets/flatadmin/img/bg/picjumbo.com_HNCK3558.jpg'
 			],
 			flatten: true
+		},
+		{
+			dest: './',
+			src: [
+				'./assets/favicon.ico'
+			],
+			flatten: true
 		}
 
 	],
