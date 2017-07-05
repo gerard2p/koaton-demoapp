@@ -21,7 +21,6 @@
   "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "koaton": "*",
     "ejs": "^2.5.5",
     "handlebars": "^4.0.6",
     "handlebars-layouts": "^3.1.4",
