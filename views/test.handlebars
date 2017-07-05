@@ -1,0 +1,24 @@
+{{#extend "main"}}
+	{{#content "title"}}Handlebars Title{{/content}}
+	{{#content "meta"}}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{/content}}
+	{{#content "css"}}
+		<link rel="/restapp/assets/vendor.css">
+		<link rel="/restapp/assets/restapp.css">
+		{{bundle "restapp.css"}}
+	{{/content}}
+	{{#content "js"}}
+		<script src="/restapp/assets/vendor.js"></script>
+		<script src="/restapp/assets/restapp.js"></script>
+		{{bundle "restapp.js"}}
+		{{bundle "restapp.js"}}
+	{{/content}}
+	{{#content "body"}}
+		{{i18n 'LOC01'}}
+		{{i18n 'LOC01' 'es'}}
+	{{/content}}
+{{/extend}}

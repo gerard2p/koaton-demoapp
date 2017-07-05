@@ -19,18 +19,16 @@ exports.default = {
 	port: process.env.port || 62626,
 	bodyParser: {},
 	error: {
-		view: 'error/error',
-		layout: 'layouts/error',
-		custom: {
-			401: 'error/401',
-			403: 'error/403',
-			404: 'error/404'
+		layout: 'error',
+		data:{
+			support_email:'gerard2perez@outlook.com',
+			description: 'Oops! - looks like something went completely wrong.'
 		}
 	},
 	localization: {
 		queryKey: 'locale',
 		directory: './locales',
-		locales: ['en'],
+		locales: ['en', 'es'],
 		modes: ['query', //  optional detect querystring - `/?locale=en-US`
 		'subdomain', //  optional detect subdomain   - `zh-CN.koajs.com`
 		'cookie', //  optional detect cookie      - `Cookie: locale=zh-TW`

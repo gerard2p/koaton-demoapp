@@ -1,0 +1,3 @@
+{
+	"LOC01": "Traducido"
+}

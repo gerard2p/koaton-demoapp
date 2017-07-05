@@ -8,7 +8,9 @@ exports.default = function ( subdomains ) {
 		.get('/login')
 		.get('/ejs', 'views.fake')
 		.get('/noengine', 'views.noengine')
-		.get('/nunjucks', 'views.nunjucks');
+		.get('/nunjucks', 'views.nunjucks')
+		.get('/handlebars', 'views.handlebars')
+		.post('/download', 'views.send');
 
 	www.rest('book')
 		.rest('page')

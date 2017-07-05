@@ -1,6 +1,6 @@
 {% extends 'layouts/test.nunjucks' %}
 
-{% block title %}Nunjucks tile{% endblock %}
+{% block title %}Nunjucks title{% endblock %}
 {% block meta %}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,11 @@
 	<link rel="/restapp/assets/restapp.css">
 	{{"restapp.css" | bundle | safe}}
 {% endblock %}
+{%block body%}
+	{{'LOC01'|i18n}}
+	{{'LOC01'|i18n('es')}}
+{% endblock %}
+
 {% block js %}
 	<script src="/restapp/assets/vendor.js"></script>
 	<script src="/restapp/assets/restapp.js"></script>

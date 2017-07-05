@@ -8,5 +8,11 @@ exports.default = {
 	},
 	nunjucks: async function (ctx, next) {
 		await ctx.render('test.njk');
+	},
+	handlebars: async function (ctx, next) {
+		await ctx.render('test.handlebars');
+	},
+	send: async function (ctx, next) {
+		await ctx.send('public/favicon.ico');
 	}
 };
